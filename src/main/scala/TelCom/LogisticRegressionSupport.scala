@@ -66,7 +66,6 @@ object LogisticRegressionSupport {
 
     // Run training algorithm to build the model
     val model1 = new LogisticRegressionWithLBFGS().setNumClasses(2).run(training)
-
     val model2 = new LogisticRegressionWithLBFGS().setNumClasses(10).run(training)
 
     //输出阈值
@@ -102,13 +101,10 @@ object LogisticRegressionSupport {
 
 
   def getLebel(x:Double) : Double ={
-
-
     if(x != 1&& x != 0)
         0.0
     else
       x
-
   }
 
 
